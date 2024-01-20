@@ -1,38 +1,66 @@
 .App {
+  max-width: 1024px;
+  margin: auto;
+  padding: 60px 0;
+}
+
+.Heading {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Paragraph {
+  margin-bottom: 30px;
+  font-size: 18px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.GithubLogo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.GithubLogo img {
+  width: 250px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1280px) {
+  .App {
+    padding: 60px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 40px;
+  }
+  .Heading {
+    margin: 10px 0;
+    font-size: 26px;
+  }
+  .Paragraph {
+    margin: 0 0 20px;
+    font-size: 16px;
+    text-align: start;
+  }
+  .GithubLogo img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 425px) {
+  .App {
+    padding: 30px 16px;
+  }
+  .Heading {
+    margin: 10px 0;
+    font-size: 22px;
+  }
+  .Paragraph {
+    margin: 0 0 20px;
+    font-size: 16px;
+    text-align: justify;
+  }
+  .GithubLogo img {
+    width: 100px;
   }
 }

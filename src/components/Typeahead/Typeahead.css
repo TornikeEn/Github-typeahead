@@ -1,0 +1,66 @@
+.Typeahead {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px 1px rgba(0, 0, 0, 0.18);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.73);
+}
+
+.Typeahead input {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.73);
+  outline: none;
+}
+
+.Typeahead ul {
+  width: 100%;
+  max-height: 300px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  border: 1px solid gray;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px 1px rgba(0, 0, 0, 0.18);
+  text-align: left;
+  list-style-type: none;
+  overflow: auto;
+}
+
+.Typeahead li {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.Typeahead li:hover {
+  background: lightgray;
+}
+
+.Typeahead li img {
+  width: 30px;
+  height: 30px;
+}
+
+.Typeahead .Close {
+  padding: 3px 3px 1px;
+  position: absolute;
+  right: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.Typeahead .Close:hover {
+  background-color: lightgray;
+}
