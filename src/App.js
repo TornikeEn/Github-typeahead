@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import classes from "./App.css";
 import Typeahead from "./components/Typeahead/Typeahead";
 import githubLogo from "./assets/images/github.png";
@@ -30,7 +30,11 @@ function App() {
 
   useEffect(() => {
     function handleClickOutsideOfTypeahead(event) {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target) && !searchedItemClicked) {
+      if (
+        wrapperRef.current &&
+        !wrapperRef.current.contains(event.target) &&
+        !searchedItemClicked
+      ) {
         setGithubUsers([]);
       }
     }
@@ -79,10 +83,10 @@ function App() {
   };
 
   const closeButtonClickEventHandler = () => {
-    setSearchedValue('');
+    setSearchedValue("");
     setGithubUsers([]);
     setSearchedItemClicked(false);
-  }
+  };
 
   return (
     <div className={classes.App}>

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.17.0",
@@ -67,7 +68,15 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "parserOptions": {
+      "babelOptions": {
+        "presets": [
+          ["babel-preset-react-app", false],
+          "babel-preset-react-app/prod"
+        ]
+      }
+    }
   },
   "browserslist": {
     "production": [
